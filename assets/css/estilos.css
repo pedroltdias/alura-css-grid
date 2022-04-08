@@ -216,6 +216,10 @@ body {
     background-color: #2C343A;
 }
 
+.cartao__imagem--desktop {
+    display: none;
+}
+
 .cartao--destaque {
     margin-bottom: 16px;
 }
@@ -290,6 +294,23 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
+    .cartao--destaque {
+        margin-bottom: 0;
+    }
+
+    .cartao__imagem--mobile {
+        display: none;
+    }
+
+    .cartao__imagem--desktop {
+        display: block;
+    }
+
+    .cartao__botao--destaque {
+        grid-column: auto;
+        padding: 16px 8px;
+    }
+
     .cartao--recentes {
         display: grid;
         grid-template-columns: auto auto;
@@ -298,7 +319,9 @@ body {
         width: 256px;
         padding: 16px;
         box-sizing: border-box;
+        align-self: flex-start;
     }
+    
     .cartao--recentes .cartao__titulo {
         grid-column: auto;
     }
